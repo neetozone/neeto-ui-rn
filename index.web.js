@@ -4,10 +4,10 @@ import { AppRegistry } from "react-native";
 
 import App from "./App";
 import { name as appName } from "./app.json";
-import sfBold from "./assets/fonts/SFProText-Bold.ttf";
-import sfMedium from "./assets/fonts/SFProText-Medium.ttf";
-import sfRegular from "./assets/fonts/SFProText-Regular.ttf";
-import sfSemiBold from "./assets/fonts/SFProText-Semibold.ttf";
+import sfBold from "./src/assets/fonts/SFProText-Bold.ttf";
+import sfMedium from "./src/assets/fonts/SFProText-Medium.ttf";
+import sfRegular from "./src/assets/fonts/SFProText-Regular.ttf";
+import sfSemiBold from "./src/assets/fonts/SFProText-Semibold.ttf";
 
 if (module.hot) {
   module.hot.accept();

@@ -52,7 +52,11 @@ const ttfLoaderConfiguration = {
   use: {
     loader: "url-loader",
   },
-  include: [path.resolve(appDirectory, "./assets")],
+  include: [
+    // Support fonts in both root-level assets and src/assets
+    path.resolve(appDirectory, "./assets"),
+    path.resolve(appDirectory, "./src/assets"),
+  ],
 };
 
 const svgLoaderConfiguration = {
