@@ -2,13 +2,23 @@ import React from "react";
 
 import { Card, Typography } from "@components";
 
+export const CardDemo = args => (
+  <Card
+    bg="background.danger"
+    elevation={5}
+    height="100px"
+    width="100px"
+    {...args}
+  />
+);
+
 const CardMetaData = {
   title: "Card",
   component: CardDemo,
   argTypes: {},
   args: {},
   parameters: {
-    notes:`
+    notes: `
 This component is wrapper over Container component.
 
 This component supports below props categories from styled-system. \n\n
@@ -21,7 +31,7 @@ This component supports below props categories from styled-system. \n\n
 
 ![image](assets/screenshots/card/shadows.png)
 
-## Usage 
+## Usage
 
 >import * as React from 'react';
 >import { Card, Typography } from '@bigbinary/neetoui-rn';
@@ -58,5 +68,3 @@ export const Cards = () => (
     </Card>
   </>
 );
-
-export const CardDemo = args => <Card  bg="background.danger" elevation={5} height="100px" width="100px" {...args} />;

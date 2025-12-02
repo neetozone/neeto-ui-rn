@@ -10,7 +10,8 @@ const SegmentedTopBarMetaData = {
   component: SegmentedTopBar,
   argTypes: {},
   args: {},
-  parameters: { notes: `
+  parameters: {
+    notes: `
 A Segment Picker component that provides toggling between two or more views.
 
 ![image](assets/screenshots/toptabbar/toptabbar-1.png)
@@ -44,7 +45,8 @@ A Segment Picker component that provides toggling between two or more views.
 >    </NavigationContainer>
 >  );
 > }
-`}
+`,
+  },
 };
 
 export default SegmentedTopBarMetaData;

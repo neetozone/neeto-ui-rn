@@ -45,28 +45,29 @@ const ButtonGroupStories = {
     },
   },
   parameters: {
-    notes:`
+    notes: `
 ButtonGroup is a linear set of segments, each of which function as a button that can display a different view/or perform a different action.
 
 ![image](assets/screenshots/buttonGroup/buttonGroup.png)
- 
+
 ## Usage
 
 >import React, { useState } from 'react';
 >import { ButtonGroup } from '@bigbinary/neetoui-rn';
-> 
+>
 >export default function Main(){
 >  const buttonItems = ["Button1", "Button2"];
 >  const [activeButton, setActiveButton] = useState(buttonItems[0]);
->  
+>
 >  return(
 >    <ButtonGroup
 >     buttonItems={buttonItems}
 >     onPress={setActiveButton}
 >     currentActiveBtn={activeButton}
 >    />)
->}     
-`},
+>}
+`,
+  },
 };
 
 export default ButtonGroupStories;

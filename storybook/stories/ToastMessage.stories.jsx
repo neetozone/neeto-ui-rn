@@ -27,9 +27,10 @@ const ToastMessage = {
       },
     },
   },
-  parameters: { notes: `
-Toast component is a wrapper over 
-  
+  parameters: {
+    notes: `
+Toast component is a wrapper over
+
 https://github.com/calintamas/react-native-toast-message.
 
 ![image](assets/screenshots/toast/toast-1.png)
@@ -74,7 +75,8 @@ https://github.com/calintamas/react-native-toast-message.
 >    </Container>
 >  );
 >}
-`}
+`,
+  },
 };
 export default ToastMessage;
 

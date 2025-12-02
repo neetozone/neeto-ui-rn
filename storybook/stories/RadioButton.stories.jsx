@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 import { Container, RadioButton } from "@components";
 
@@ -27,7 +27,8 @@ const RadioButtonStories = {
     selected: false,
     label: "Radio button demo",
   },
-  parameters: {notes: `
+  parameters: {
+    notes: `
 
 ![image](assets/screenshots/radioButton/radioButton.png)
 
@@ -69,7 +70,8 @@ This component supports below props categories from styled-system.
 >    </Container>
 >  );
 > }
-`}
+`,
+  },
 };
 
 export default RadioButtonStories;
@@ -83,7 +85,7 @@ export const RadioButtonDemo = args => {
         disabled={disabled}
         label={label}
         selected={selected}
-        onSelect={() => { }}
+        onSelect={() => {}}
       />
     </Container>
   );

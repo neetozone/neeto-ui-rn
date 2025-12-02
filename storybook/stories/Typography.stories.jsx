@@ -103,7 +103,7 @@ This component supports below props categories from [styled-system ](/styled-sys
 >     </Container>
 >  );
 > }
-`
+`,
   },
 };
 export default TypographyStories;

@@ -41,8 +41,9 @@ This component supports below props categories from styled-system.
 >      onComplete={() =>{ console.log("Completed");}}
 > />
 >  );
-> }  
-`}
+> }
+`,
+  },
 };
 
 export default OnBoardingStories;

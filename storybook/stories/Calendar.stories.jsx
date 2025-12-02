@@ -9,7 +9,7 @@ const CalendarStories = {
   component: Calendar,
   parameters: {
     notes: `
-Calendar component built on top of 
+Calendar component built on top of
 
 [react-native-calendars](https://github.com/wix/react-native-calendars) with our custom theme.
 
@@ -32,11 +32,11 @@ Calendar component built on top of
 >  );
 > }
 
-Checkout [react-native-calendars](https://github.com/wix/react-native-calendars) 
+Checkout [react-native-calendars](https://github.com/wix/react-native-calendars)
 
 package for all the available props
-`
-  }
+`,
+  },
 };
 
 export default CalendarStories;

@@ -4,12 +4,30 @@ import { Button, TopBar } from "@components";
 
 const itemList = ["All", "Active", "Expired"];
 
+export const TopBarStories = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  return (
+    <>
+      <TopBar
+        activeIndex={activeTab}
+        data={itemList}
+        onActiveTabChange={index => {
+          setActiveTab(index);
+        }}
+      />
+      <Button label="Switch to `Expired` tab" onPress={() => setActiveTab(2)} />
+    </>
+  );
+};
+
 const TopBarStoriesMetaData = {
   title: "TopBar",
   component: TopBarStories,
   argTypes: {},
   args: {},
-  parameters: { notes: `
+  parameters: {
+    notes: `
 Buttons are touchable elements used to interact with the screen and to trigger an action.
 
 ![image](assets/screenshots/toptabbar/toptabbar-1.png)
@@ -42,24 +60,8 @@ Buttons are touchable elements used to interact with the screen and to trigger a
 >    </>
 >  );
 > }
-`}
+`,
+  },
 };
 
 export default TopBarStoriesMetaData;
-
-export const TopBarStories = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  return (
-    <>
-      <TopBar
-        activeIndex={activeTab}
-        data={itemList}
-        onActiveTabChange={index => {
-          setActiveTab(index);
-        }}
-      />
-      <Button label="Switch to `Expired` tab" onPress={() => setActiveTab(2)} />
-    </>
-  );
-};

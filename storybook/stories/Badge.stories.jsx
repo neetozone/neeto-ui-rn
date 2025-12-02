@@ -1,7 +1,6 @@
 import React from "react";
 
-import { Badge, Container } from "@components";
-import { Typography } from "@components";
+import { Badge, Container, Typography } from "@components";
 
 import { theme } from "../../src/theme";
 
@@ -56,10 +55,10 @@ const BadgeMetaData = {
       },
     },
   },
-  parameters:{
+  parameters: {
     notes: `
 This component supports below props categories from styled-system.
-   
+
 - flexbox
 - space
 - border
@@ -67,7 +66,7 @@ This component supports below props categories from styled-system.
 - layout
 
 ![image](assets/screenshots/badge/badges.png)
-    
+
 ## Usage
 
 >import * as React from 'react';
@@ -86,8 +85,8 @@ This component supports below props categories from styled-system.
 >    </Container>
 >  );
 > }
-`
-  }
+`,
+  },
 };
 
 export default BadgeMetaData;

@@ -48,8 +48,8 @@ A component used to display an expandable list item.
 >    </Container>
 >  );
 > }
-`
-  }
+`,
+  },
 };
 export default AccordionStories;
 

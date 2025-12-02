@@ -11,10 +11,11 @@ const PopoverStories = {
   component: Popover,
   argTypes: {},
   args: {},
-  parameters: {notes: `
-A Lightweight Popover component over 
+  parameters: {
+    notes: `
+A Lightweight Popover component over
 
-[react-native-popover-view](https://www.npmjs.com/package/react-native-popover-view)  
+[react-native-popover-view](https://www.npmjs.com/package/react-native-popover-view)
 
 which can be rendered with array of data or with custom body.
 
@@ -89,7 +90,8 @@ which can be rendered with array of data or with custom body.
 >    </Container>
 >  );
 > }
-`}
+`,
+  },
 };
 
 export default PopoverStories;

@@ -74,8 +74,9 @@ By default, the only button will be an 'OK' button.
 >      }}
 >    />
 >  );
-} 
-`}
+}
+`,
+  },
 };
 export default AlertStories;
 

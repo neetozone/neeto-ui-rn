@@ -86,7 +86,7 @@ const ChipStories = {
     },
   },
   parameters: {
-    notes:`
+    notes: `
 Chips are compact elements that represent an input, attribute, or action.
 
 ![image](assets/screenshots/chip/chip.png)
@@ -113,7 +113,8 @@ Chips are compact elements that represent an input, attribute, or action.
 >   </Container>
 >  );
 > }
-`},
+`,
+  },
 };
 
 export default ChipStories;

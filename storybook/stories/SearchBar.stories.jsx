@@ -14,6 +14,26 @@ const keyBoardTypes = [
   "web-search",
 ];
 
+export const SearchBarDemo = args => {
+  const [searchedText, setSearchedText] = useState(0);
+
+  return (
+    <Container>
+      <SearchBar {...args} onChangeText={setSearchedText} />
+      <Typography py={2}>
+        Searched expression is:
+        <Typography fontFamily={theme.fonts.sf600}>{searchedText}</Typography>.
+      </Typography>
+      <Typography>
+        Shown with a debounced delay of:
+        <Typography fontFamily={theme.fonts.sf600}>
+          {args.debounceDelay}
+        </Typography>
+      </Typography>
+    </Container>
+  );
+};
+
 const SearchBarMetaData = {
   title: "SearchBar",
   component: SearchBarDemo,
@@ -38,7 +58,8 @@ const SearchBarMetaData = {
     keyboardType: keyBoardTypes[0],
     debounceDelay: 1000,
   },
-  parameters:{notes: `
+  parameters: {
+    notes: `
 SearchBars are used to search or filter items.
 
 ![image](assets/screenshots/searchbar/searchbar.png)
@@ -54,8 +75,9 @@ SearchBars are used to search or filter items.
 >      <SearchBar placeholder="Search" onChangeText={() => {}} />
 >   </Container>
 >  );
-> }  
-`}
+> }
+`,
+  },
 };
 
 export default SearchBarMetaData;
@@ -72,23 +94,3 @@ export const Searchbar = () => (
     </Container>
   </>
 );
-
-export const SearchBarDemo = args => {
-  const [searchedText, setSearchedText] = useState(0);
-
-  return (
-    <Container>
-      <SearchBar {...args} onChangeText={setSearchedText} />
-      <Typography py={2}>
-        Searched expression is:
-        <Typography fontFamily={theme.fonts.sf600}>{searchedText}</Typography>.
-      </Typography>
-      <Typography>
-        Shown with a debounced delay of:
-        <Typography fontFamily={theme.fonts.sf600}>
-          {args.debounceDelay}
-        </Typography>
-      </Typography>
-    </Container>
-  );
-};

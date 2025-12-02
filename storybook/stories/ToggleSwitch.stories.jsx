@@ -36,7 +36,8 @@ ToggleSwitch component is a simple switch toggle component describes what is bei
 >   </Container>
 >  );
 > }
-`},
+`,
+  },
 };
 
 export default ToggleSwitchStories;

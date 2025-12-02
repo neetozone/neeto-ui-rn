@@ -23,17 +23,16 @@ Buttons are touchable elements used to interact with the screen and to trigger a
 >      <SocialButton variant="google" />
 >    </Container>
 >  );
-> }  
-`}
+> }
+`,
+  },
 };
 
 export default ButtonMetaData;
 
-export const SocialButtons = () => {
-  return (
-    <Container alignItems="center" flex={1}>
-      <SocialButton my={9} variant="apple" />
-      <SocialButton variant="google" />
-    </Container>
-  )
-};
+export const SocialButtons = () => (
+  <Container alignItems="center" flex={1}>
+    <SocialButton my={9} variant="apple" />
+    <SocialButton variant="google" />
+  </Container>
+);

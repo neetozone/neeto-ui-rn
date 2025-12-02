@@ -52,8 +52,9 @@ This component supports below props categories from styled-system.
 >        />
 >     </Container>
 >  );
->}    
-`},
+>}
+`,
+  },
 };
 
 export default FABStories;

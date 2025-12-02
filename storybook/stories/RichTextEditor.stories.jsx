@@ -7,7 +7,7 @@ const RichTextEditorStories = {
   title: "Rich Text Editor",
   parameters: {
     notes: `
-RichTextEditor component is wrapper created around react-native-pell-rich-editor. 
+RichTextEditor component is wrapper created around react-native-pell-rich-editor.
 
 This has dependency on react-native-webview, so make sure to add that as well.
 
@@ -51,7 +51,8 @@ This has dependency on react-native-webview, so make sure to add that as well.
 >   </Container>
 >  );
 > };
-`}
+`,
+  },
 };
 
 export default RichTextEditorStories;

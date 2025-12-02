@@ -19,17 +19,17 @@ One-Time password input component.
 >import { Container, OtpInputs, Typography} from '@bigbinary/neetoui-rn';
 
 >export default function Main() {
- const [code, setCode] = useState("");
- return (
-   <Container flex={1} justifyContent="center" alignItems="center">
+  const [code, setCode] = useState("");
+  return (
+    <Container flex={1} justifyContent="center" alignItems="center">
       <OtpInputs code={code} numberOfInputs={6} handleChange={setCode} />
       <Typography py={moderateScale(10)} fontSize="xl">
         Your entered otp code is {code}
       </Typography>
     </Container>
   );
-  `
-  }
+  `,
+  },
 };
 export default OtpInputsMeta;
 

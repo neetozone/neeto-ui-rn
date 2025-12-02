@@ -71,7 +71,8 @@ BottomSheet can be used to select an item from list of items like a DropDown
 >   </Container>
 >  );
 > }
-`},
+`,
+  },
 };
 export default TypographyStories;
 
