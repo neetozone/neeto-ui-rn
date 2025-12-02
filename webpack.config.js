@@ -52,11 +52,7 @@ const ttfLoaderConfiguration = {
   use: {
     loader: "url-loader",
   },
-  include: [
-    // Support fonts in both root-level assets and src/assets
-    path.resolve(appDirectory, "./assets"),
-    path.resolve(appDirectory, "./src/assets"),
-  ],
+  include: [path.resolve(appDirectory, "./src/assets")],
 };
 
 const svgLoaderConfiguration = {
@@ -88,7 +84,15 @@ module.exports = {
     filename: "rnw.bundle.js",
   },
   resolve: {
-    extensions: [".web.tsx", ".web.ts", ".tsx", ".ts", ".web.js", ".js", ".jsx"],
+    extensions: [
+      ".web.tsx",
+      ".web.ts",
+      ".tsx",
+      ".ts",
+      ".web.js",
+      ".js",
+      ".jsx",
+    ],
     alias: {
       "react-native$": "react-native-web",
     },
@@ -117,6 +121,6 @@ module.exports = {
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
-    maxAssetSize: 512000
-  }
+    maxAssetSize: 512000,
+  },
 };
