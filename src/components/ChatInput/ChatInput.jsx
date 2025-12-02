@@ -114,7 +114,7 @@ const labels = {
 
 const convertMentionsToHTMLAndPlainText = ({ suggestions, value }) => {
   const mentionsRegex = new RegExp(/@\[[^)]*\)/g);
-  let html = `<p>${value}</p>`;
+  let html = `<p>${value.replace(/\n/g, "<br>")}</p>`; // Replace newlines with <br> for HTML output
   let plainText = value;
   const allMentions = html.matchAll(mentionsRegex);
 
@@ -140,7 +140,6 @@ const convertMentionsToHTMLAndPlainText = ({ suggestions, value }) => {
 
   return { html, plainText };
 };
-
 export const ChatInput = forwardRef(
   (
     {

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { StyleSheet } from "react-native";
 
 import PropTypes from "prop-types";
@@ -14,7 +14,9 @@ import { theme } from "@theme";
 
 const springConfig = {
   mass: 1,
-  overshootClamping: true,
+  damping: 18,
+  stiffness: 100,
+  overshootClamping: false,
   restSpeedThreshold: 0.5,
   restDisplacementThreshold: 0.5,
 };
@@ -22,23 +24,51 @@ const springConfig = {
 const spacing = moderateScale(6);
 
 export const Indicator = ({ measure }) => {
-  const { x, width, height } = measure;
-
+  const firstRender = useRef(true);
   const translateX = useSharedValue(0);
   const animatedWidth = useSharedValue(0);
 
   useEffect(() => {
-    cancelAnimation(translateX);
-    cancelAnimation(animatedWidth);
+    if (!measure) return;
 
-    translateX.value = withSpring(x + spacing / 2, springConfig);
-    animatedWidth.value = withSpring(width - spacing, springConfig);
-  }, [animatedWidth, translateX, width, x]);
+    const { x, width } = measure;
+
+    if (firstRender.current) {
+      if (translateX.value === 0 && x > 0) {
+        translateX.value = x + spacing / 2;
+      }
+
+      if (animatedWidth.value === 0 && width > 0) {
+        animatedWidth.value = width - spacing;
+      }
+
+      firstRender.current = false;
+    } else {
+      // Cancel any ongoing animations first
+      cancelAnimation(translateX);
+      cancelAnimation(animatedWidth);
+
+      translateX.value = withSpring(x + spacing / 2, springConfig);
+      animatedWidth.value = withSpring(width - spacing, springConfig);
+    }
+  }, [measure]);
 
   const tabTranslateAnimatedStyles = useAnimatedStyle(() => ({
     transform: [{ translateX: translateX.value }],
     width: animatedWidth.value,
   }));
+
+  // Guard against undefined measure
+  if (
+    !measure ||
+    typeof measure.x !== "number" ||
+    typeof measure.width !== "number" ||
+    typeof measure.height !== "number"
+  ) {
+    return null;
+  }
+
+  const { height } = measure;
 
   return (
     <Animated.View

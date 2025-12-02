@@ -137,7 +137,7 @@ export const SearchBar = ({
             }}
             {...searchbarProps}
           />
-          {showCancelButton && (
+          {showCancelButton && searchText.length > 0 && (
             <Container>
               <Touchable
                 flexGrow={1}

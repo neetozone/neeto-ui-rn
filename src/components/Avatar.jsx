@@ -10,7 +10,8 @@ import Animated, {
 } from "react-native-reanimated";
 import { moderateScale } from "react-native-size-matters";
 
-import { Typography, Container } from "@components";
+import { Container } from "./Container";
+import { Typography } from "./Typography";
 
 /**
  * Avatars can be used to represent people in a graphical way.
@@ -97,12 +98,14 @@ export const Avatar = ({
           {acronym.toUpperCase()}
         </Typography>
       </Container>
-      <Animated.Image
-        source={{ uri: imageUrl }}
-        style={profileImageStyle}
-        onLoad={() => (opacity.value = 1)}
-        {...rest}
-      />
+      {imageUrl && (
+        <Animated.Image
+          source={{ uri: imageUrl }}
+          style={profileImageStyle}
+          onLoad={() => (opacity.value = 1)}
+          {...rest}
+        />
+      )}
     </Container>
   );
 };

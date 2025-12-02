@@ -1,5 +1,10 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { StyleSheet, FlatList, Keyboard } from "react-native";
+import {
+  StyleSheet,
+  FlatList,
+  Keyboard,
+  InteractionManager,
+} from "react-native";
 
 import PropTypes from "prop-types";
 import Modal from "react-native-modal";
@@ -176,6 +181,17 @@ export const BottomSheet = ({
   ...rest
 }) => {
   const [searchText, setSearchText] = useState("");
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    if (isVisible) {
+      InteractionManager.runAfterInteractions(() => {
+        setIsReady(true);
+      });
+    } else {
+      setIsReady(false);
+    }
+  }, [isVisible]);
 
   const getLabel = useCallback(
     (item, index) => item?.label || labelExtractor(item, index) || item,
@@ -214,7 +230,7 @@ export const BottomSheet = ({
       avoidKeyboard
       hideModalContentWhileAnimating
       useNativeDriver
-      isVisible={isVisible}
+      isVisible={isVisible && isReady}
       style={styles.modalStyle}
       onRequestClose={hide}
       onBackdropPress={() => {

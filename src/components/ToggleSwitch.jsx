@@ -48,7 +48,7 @@ export const ToggleSwitch = ({ value, onValueChange, disabled }) => {
 
   const startAnimation = () => {
     Animated.timing(animatedPosition, {
-      toValue: value ? moderateScale(18) : 0,
+      toValue: value ? moderateScale(24) : 0,
       duration: 300,
       useNativeDriver: false,
     }).start();

@@ -9,8 +9,9 @@ import {
 import styled from "styled-components/native";
 import { space, flexbox, border, layout } from "styled-system";
 
-import { Container } from "@components";
 import { useKeyboard } from "@hooks";
+
+import Container from "./Container";
 
 export const ScrollView = styled.ScrollView.attrs(() => ({
   keyboardShouldPersistTaps: "handled",
@@ -80,12 +81,16 @@ export const RichTextEditor = ({
   toolbarActions,
   editorProps,
   toolBarProps,
+  richTextRef: externalRichTextRef,
   ...rest
 }) => {
-  const richTextRef = useRef();
+  const internalRichTextRef = useRef();
   const keyboardHeight = useKeyboard();
   const [toolbarVisible, setToolbarVisible] = useState(false);
   const showToolbar = keyboardHeight > 0 && toolbarVisible;
+
+  // Use the external ref if provided, otherwise use the internal ref
+  const richTextRef = externalRichTextRef || internalRichTextRef;
 
   const computeToolbarActions = () => {
     const actionItems = [];
@@ -116,11 +121,11 @@ export const RichTextEditor = ({
         onChange={onChange}
         onBlur={() => {
           setToolbarVisible(false);
-          editorProps?.onBlurFn();
+          editorProps?.onBlurFn?.();
         }}
         onFocus={() => {
           setToolbarVisible(true);
-          editorProps?.onFocusFn();
+          editorProps?.onFocusFn?.();
         }}
         {...editorProps}
       />
@@ -160,4 +165,8 @@ RichTextEditor.propTypes = {
   toolBarProps: PropTypes.object,
   editorWrapperStyle: PropTypes.object,
   toolbarWrapperStyle: PropTypes.object,
+  /**
+   * Ref object to control the editor from outside the component.
+   */
+  richTextRef: PropTypes.object,
 };

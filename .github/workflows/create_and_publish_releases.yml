@@ -19,8 +19,8 @@ jobs:
 
       - name: Setup git user
         run: |
-          git config user.name "Paul Sojan"
-          git config user.email "paul.sojan@bigbinary.com"
+          git config user.name "Shashank Bhatotia"
+          git config user.email "shashank.bhatotia@bigbinary.com"
       - name: Setup NodeJS LTS version
         uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516
         with:
@@ -28,9 +28,6 @@ jobs:
 
       - name: Setup the project
         run: yarn install
-
-      - name: Generate production build
-        run: yarn build
 
       - name: Prefix version tag with "v"
         run: yarn config set version-tag-prefix "v"
@@ -49,6 +46,9 @@ jobs:
       - name: Bump the major version and create git tag on release
         if: ${{ contains(github.event.pull_request.labels.*.name, 'major') }}
         run: yarn version --major
+
+      - name: Generate production build
+        run: yarn build
 
       - name: Get the package version from package.json
         uses: tyankatsu0105/read-package-version-actions@5aad2bb630a577ee4255546eb3ee0593df68f6ca
