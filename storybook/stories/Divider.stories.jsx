@@ -50,7 +50,8 @@ Divider is a separator line that can be used between two different sections.
 >   </Container>
 >  );
 > }
-`},
+`,
+  },
 };
 
 export default DividerStories;

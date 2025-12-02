@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Platform } from "react-native";
 
 import { Notification } from "@bigbinary/neeto-icons-rn";
 import { ThemeContext } from "styled-components/native";
 
-import { NotificationPreferenceList, Container } from "@components";
+import { NotificationPreferenceList, Container, Typography } from "@components";
 
 const NotificationPreferenceListMetaData = {
   title: "NotificationPreferenceList",
@@ -21,7 +22,7 @@ Buttons are touchable elements used to interact with the screen and to trigger a
 
 >export default function Main() {
 >  const [data, setData] = useState([]);
-> 
+>
 >  const handleSwitch = (item, index) => {
 >    setData(prevData => {
 >      const newData = [...prevData];
@@ -29,7 +30,7 @@ Buttons are touchable elements used to interact with the screen and to trigger a
 >      return newData;
 >    });
 >  };
->    
+>
 >  useEffect(() => {
 >    setData([
 >      {
@@ -66,14 +67,15 @@ Buttons are touchable elements used to interact with the screen and to trigger a
 >      },
 >    ]);
 >  }, []);
->   
+>
 >  return (
 >    <Container flex={1} alignItems="center" justifyContent="center">
 >      {data && <NotificationPreferenceList data={data} />}
 >    </Container>
 >  );
 > }
-`}
+`,
+  },
 };
 
 export default NotificationPreferenceListMetaData;
@@ -123,6 +125,16 @@ export const NotificationPreferenceListComponent = () => {
       },
     ]);
   }, []);
+
+  if (Platform.OS === "web") {
+    return (
+      <Container alignItems="center" flex={1} justifyContent="center">
+        <Typography>
+          This story is disabled on web due to animation compatibility issues.
+        </Typography>
+      </Container>
+    );
+  }
 
   return (
     <Container alignItems="center" flex={1} justifyContent="center">

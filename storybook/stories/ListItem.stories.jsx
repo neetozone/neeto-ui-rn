@@ -16,7 +16,7 @@ const ListItemMetaData = {
     },
   },
   parameters: {
-    notes:`
+    notes: `
 ListItems are components that displays a label with different values like string, toggle, button etc.
 
 ![image](assets/screenshots/listitem/listItemStyles.png)
@@ -36,7 +36,8 @@ ListItems are components that displays a label with different values like string
 >   </Container>
 > );
 >}
-`},
+`,
+  },
 };
 
 export default ListItemMetaData;

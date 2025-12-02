@@ -13,9 +13,12 @@ import ErrorIcon from "@assets/icons/error.svg";
 import InfoIcon from "@assets/icons/info.svg";
 import SuccessIcon from "@assets/icons/success.svg";
 import WarningIcon from "@assets/icons/warning.svg";
-// eslint-disable-next-line import/no-cycle
-import { Container, Typography, Card, Touchable } from "@components";
 import { defaultToasterConfig } from "@config";
+
+import { Card } from "./Card";
+import { Container } from "./Container";
+import { Touchable } from "./Touchable";
+import { Typography } from "./Typography";
 
 const ToastComponent = ({ type, text1, text2, hide, isVisible }) => {
   const theme = useContext(ThemeContext);

@@ -6,47 +6,6 @@ import { OnBoarding } from "@components";
 
 import Neeto from "../../public/assets/images/neeto.svg";
 
-const OnBoardingStories = {
-  title: "OnBoarding",
-  component: OnBoardingStories,
-  parameters: {
-    notes: `
-This component supports below props categories from styled-system.
-
-- flexbox
-- space
-- border
-- layout
-- color
-- buttonStyle
-\n
-
-![image](assets/screenshots/onboarding/onboarding.png)
-
-## Usage
-
->import * as React from "react";
->import { moderateScale } from "react-native-size-matters";
->import { OnBoarding } from "@bigbinary/neetoui-rn";
->
->export default function Main() {
->
->  return (
->    <OnBoarding
->      appLogo={Neeto}
->      slides={[
->          {title: "Welcome to neetoInovice", description: "Enter your daily ...", illustration:""},
->          {title: "", description: "", illustration:""}
->      ]}
->      onComplete={() =>{ console.log("Completed");}}
-> />
->  );
-> }  
-`}
-};
-
-export default OnBoardingStories;
-
 export const OnBoardingComponent = () => {
   const ref = useRef();
 
@@ -79,3 +38,45 @@ export const OnBoardingComponent = () => {
     </SafeAreaProvider>
   );
 };
+
+const OnBoardingStories = {
+  title: "OnBoarding",
+  component: OnBoardingComponent,
+  parameters: {
+    notes: `
+This component supports below props categories from styled-system.
+
+- flexbox
+- space
+- border
+- layout
+- color
+- buttonStyle
+\n
+
+![image](assets/screenshots/onboarding/onboarding.png)
+
+## Usage
+
+>import * as React from "react";
+>import { moderateScale } from "react-native-size-matters";
+>import { OnBoarding } from "@bigbinary/neetoui-rn";
+>
+>export default function Main() {
+>
+>  return (
+>    <OnBoarding
+>      appLogo={Neeto}
+>      slides={[
+>          {title: "Welcome to neetoInovice", description: "Enter your daily ...", illustration:""},
+>          {title: "", description: "", illustration:""}
+>      ]}
+>      onComplete={() =>{ console.log("Completed");}}
+> />
+>  );
+> }
+`,
+  },
+};
+
+export default OnBoardingStories;

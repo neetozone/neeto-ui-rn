@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { moderateScale } from "react-native-size-matters";
 import CarouselParent, { Pagination } from "react-native-snap-carousel";
 
-import { Container } from "@components";
+import { Container } from "./Container";
 
 const { width } = Dimensions.get("screen");
 

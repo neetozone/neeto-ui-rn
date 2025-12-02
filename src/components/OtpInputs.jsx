@@ -13,7 +13,8 @@ import {
   color,
 } from "styled-system";
 
-import { Container, Typography } from "@components";
+import { Container } from "./Container";
+import { Typography } from "./Typography";
 
 import { theme } from "../theme";
 

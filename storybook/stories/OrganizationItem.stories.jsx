@@ -19,7 +19,8 @@ const OrganizationItemMetaData = {
 >    <OrganizationItem name="BigBinary Solutions Pvt. Ltd." />
 >  );
 > }
-`}
+`,
+  },
 };
 
 export default OrganizationItemMetaData;

@@ -92,16 +92,11 @@ export default function Main() {
 
 export default ButtonMetaData;
 
-export const ButtonDemo = args => {
-  console.log({args})
-  
-  return (
+export const ButtonDemo = args => (
   <Container alignItems="center" flex={1} justifyContent="center">
-    <Button
-      {...args}
-    />
+    <Button {...args} />
   </Container>
-)};
+);
 
 export const Buttons = () => (
   <Container alignItems="center" flex={1}>
@@ -153,18 +148,18 @@ export const Buttons = () => (
       )}
     />
     <Button
+      RightIcon={() => <Plus color={theme.fonts.primary} size={16} />}
       label="Right Icon Text Button"
       my={9}
       variant="text"
-      RightIcon={() => <Plus color={theme.fonts.primary} size={16} />}
     />
     <Button
       isLoading
+      RightIcon={() => <Plus color={theme.fonts.primary} size={16} />}
       label="Right Icon Text Button"
       loadingText="Loading with text variant..."
       my={9}
       variant="text"
-      RightIcon={() => <Plus color={theme.fonts.primary} size={16} />}
     />
   </Container>
 );

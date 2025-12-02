@@ -9,6 +9,7 @@ import { Container } from "./Container";
 import { Loader } from "./Loader";
 import { Touchable } from "./Touchable";
 import { Typography } from "./Typography";
+
 // eslint-disable-next-line @bigbinary/neeto/no-dangling-constants
 export const BUTTON_VARIANTS = Object.freeze({
   SOLID: "solid",

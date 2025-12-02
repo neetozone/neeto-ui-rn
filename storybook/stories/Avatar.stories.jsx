@@ -64,7 +64,8 @@ Avatars can be used to represent people in a graphical way.
 >   </Container>
 >  );
 > }
-`}
+`,
+  },
 };
 export default AvatarStories;
 

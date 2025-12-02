@@ -8,72 +8,6 @@ import {
   Container,
 } from "@components";
 
-const ChatInputMetaData = {
-  title: "ChatInput",
-  component: ChatInputs,
-  parameters: {notes: `
-ChatInput component supports various options 
- 
-like \`REPLY\`, \`NOTE\` and \`FORWARD\`.
-
-This component supports below props categories from styled-system.
-
-- flexbox
-- space
-- border
-- buttonStyle
-- brandLeft
-- typography
-
-![image](assets/screenshots/chatInput/chatInput.png)
-
-## Usage
-
-import * as React from 'react';
-import { Typography, ChatInput, Container } from '@bigbinary/neetoui-rn';
-
-export default function Main() {
-  const [value, setValue] = React.useState(
-    "Hey Oliver, We are working on this issue. We will keep you update");
-
-  return (
-    <Container flex={1}>
-      <Container alignItems="center" flex={1} justifyContent="center">
-        <Typography> Desk Example</Typography>
-      </Container>
-      <Container align-self="end">
-        <ChatInput
-          shouldShowEmailFields
-          attachmentsCount={2}
-          toEmails="oliver@example.com"
-          value={value}
-          Attachments={
-            <Container alignItems="flex-start">
-              <AnimatedImage
-                imageHeight={30}
-                imageUrl="https"
-                imageWidth={30}
-                resizeMode="cover"
-              />
-            </Container>
-          }
-          onChangeText={setValue}
-          onCannedResponse={() => {
-            alert("On Canned Response");
-          }}
-          onForward={() => {
-            alert("On Forward");
-          }}
-        />
-      </Container>
-    </Container>
-  );
- }  
-`}
-};
-
-export default ChatInputMetaData;
-
 export const ChatInputs = () => {
   const chatInputRef = useRef();
 
@@ -151,3 +85,71 @@ export const ChatInputs = () => {
     </Container>
   );
 };
+
+const ChatInputMetaData = {
+  title: "ChatInput",
+  component: ChatInputs,
+  parameters: {
+    notes: `
+ChatInput component supports various options
+
+like \`REPLY\`, \`NOTE\` and \`FORWARD\`.
+
+This component supports below props categories from styled-system.
+
+- flexbox
+- space
+- border
+- buttonStyle
+- brandLeft
+- typography
+
+![image](assets/screenshots/chatInput/chatInput.png)
+
+## Usage
+
+import * as React from 'react';
+import { Typography, ChatInput, Container } from '@bigbinary/neetoui-rn';
+
+export default function Main() {
+  const [value, setValue] = React.useState(
+    "Hey Oliver, We are working on this issue. We will keep you update");
+
+  return (
+    <Container flex={1}>
+      <Container alignItems="center" flex={1} justifyContent="center">
+        <Typography> Desk Example</Typography>
+      </Container>
+      <Container align-self="end">
+        <ChatInput
+          shouldShowEmailFields
+          attachmentsCount={2}
+          toEmails="oliver@example.com"
+          value={value}
+          Attachments={
+            <Container alignItems="flex-start">
+              <AnimatedImage
+                imageHeight={30}
+                imageUrl="https"
+                imageWidth={30}
+                resizeMode="cover"
+              />
+            </Container>
+          }
+          onChangeText={setValue}
+          onCannedResponse={() => {
+            alert("On Canned Response");
+          }}
+          onForward={() => {
+            alert("On Forward");
+          }}
+        />
+      </Container>
+    </Container>
+  );
+  }
+`,
+  },
+};
+
+export default ChatInputMetaData;

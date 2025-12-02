@@ -41,7 +41,8 @@ MultiSelect can be used to select multiple options from a list of options.
 >    />
 > );
 > }
-`}
+`,
+  },
 };
 
 export default MultiSelectStories;

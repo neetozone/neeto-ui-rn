@@ -4,7 +4,8 @@ import propTypes from "@styled-system/prop-types";
 import PropTypes from "prop-types";
 import { moderateScale } from "react-native-size-matters";
 
-import { Typography, Container } from "@components";
+import { Container } from "./Container";
+import { Typography } from "./Typography";
 
 /**
  * ListItems are components that displays a label with different values like string, toggle, button etc.

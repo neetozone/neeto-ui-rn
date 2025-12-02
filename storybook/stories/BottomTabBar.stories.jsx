@@ -13,7 +13,7 @@ const BottomTabBarMetaData = {
   args: {},
   parameters: {
     notes: `
-BottomTabBar is animated custom tabbar component which needs to used along with 
+BottomTabBar is animated custom tabbar component which needs to used along with
 
 [React Navigation & Bottom Tabs Navigator](https://reactnavigation.org/docs/bottom-tab-navigator/)
 
@@ -73,7 +73,8 @@ BottomTabBar is animated custom tabbar component which needs to used along with
 >    </Tab.Navigator>
 >  );
 > }
-`}
+`,
+  },
 };
 
 export default BottomTabBarMetaData;

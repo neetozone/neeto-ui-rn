@@ -1,6 +1,7 @@
 import React from "react";
 
 import { EmailSent, Down } from "@bigbinary/neeto-icons-rn";
+
 import { Input, Container, Typography } from "@components";
 
 import { theme } from "../../src/theme";
@@ -15,6 +16,12 @@ const keyBoardTypes = [
   "phone-pad",
   "web-search",
 ];
+
+const InputDemo = args => {
+  const [value, setValue] = React.useState(args.value);
+
+  return <Input {...args} value={value} onChangeText={setValue} />;
+};
 
 const InputMetaData = {
   title: "Input",
@@ -93,7 +100,8 @@ This component supports below props categories from styled-system.
 >   </Container>
 > );
 >}
-`}
+`,
+  },
 };
 
 export default InputMetaData;
@@ -203,14 +211,14 @@ export const Inputs = () => (
       <Input
         inputProps={{ multiline: true, height: 100 }}
         label="Message"
-        value="Lorem ipsum dolor sit amet, 
+        value="Lorem ipsum dolor sit amet,
           consectetur adipiscing elit.
-          In sagittis scelerisque euismod. 
+          In sagittis scelerisque euismod.
           Vivamus efficitur libero ut fermentum elementum.
-          Aenean scelerisque sed augue quis vestibulum. 
-          
+          Aenean scelerisque sed augue quis vestibulum.
+
           consectetur adipiscing elit.
-          In sagittis scelerisque euismod. 
+          In sagittis scelerisque euismod.
           Vivamus efficitur libero ut fermentum elementum.
           Aenean scelerisque sed augue quis vestibulum. "
         onChangeText={() => {}}
@@ -218,9 +226,3 @@ export const Inputs = () => (
     </Container>
   </>
 );
-
-const InputDemo = args => {
-  const [value, setValue] = React.useState(args.value);
-
-  return <Input {...args} value={value} onChangeText={setValue} />;
-};

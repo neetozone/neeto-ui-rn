@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { moderateScale } from "react-native-size-matters";
 import { ThemeContext } from "styled-components/native";
 
-import { Touchable } from "@components";
+import { Touchable } from "../Touchable";
 
 export const IconButton = ({ Icon, iconProps, ...rest }) => {
   const theme = useContext(ThemeContext);

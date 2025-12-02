@@ -13,9 +13,9 @@ import { getShadowStyles } from "../utils";
 const StyledTouchableOpacity = styled(TouchableOpacity)`
   ${flexbox}
   ${space}
- ${border}
- ${color}
- ${layout}
+  ${border}
+  ${color}
+  ${layout}
 `;
 
 /**

@@ -2,12 +2,27 @@ import React from "react";
 
 import { Touchable, Typography } from "@components";
 
+export const TouchableDemo = args => (
+  <Touchable
+    alignItems="center"
+    bg="background.secondary"
+    height="30px"
+    justifyContent="center"
+    rippleConfig={{ containerBorderRadius: 50 }}
+    width="100px"
+    {...args}
+  >
+    <Typography fontSize="14px">Touchable</Typography>
+  </Touchable>
+);
+
 const TouchableMetaData = {
   title: "Touchable",
   component: TouchableDemo,
   argTypes: {},
   args: {},
-  parameters: { notes: `
+  parameters: {
+    notes: `
 Touchable component is a wrapper over Ripple.
 
 This component supports below props categories from styled-system.
@@ -40,7 +55,8 @@ This component supports below props categories from styled-system.
 >     </Touchable>
 >  );
 > }
-`}
+`,
+  },
 };
 
 export default TouchableMetaData;
@@ -71,11 +87,3 @@ export const Touchables = () => (
     </Touchable>
   </>
 );
-
-export const TouchableDemo = args => <Touchable alignItems="center"
-  bg="background.secondary"
-  height="30px"
-  justifyContent="center"
-  rippleConfig={{ containerBorderRadius: 50 }}
-  width="100px" {...args} ><Typography fontSize="14px">Touchable</Typography>
-</Touchable>;

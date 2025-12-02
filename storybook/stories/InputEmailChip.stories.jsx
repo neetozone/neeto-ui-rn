@@ -2,6 +2,27 @@ import React, { useState } from "react";
 
 import { InputEmailChip, Container, Typography } from "@components";
 
+export const InputEmailChipDemo = () => (
+  <>
+    <Template
+      emails={["oliver@example.com", "john@example.com"]}
+      label="Emails"
+      title="emails & label"
+    />
+    <Template
+      emails={["oliver@example.com", "john@example.com"]}
+      title="emails Only"
+    />
+    <Template label="Emails" title="label only" />
+    <Template
+      disabled
+      emails={["oliver@example.com", "john@example.com"]}
+      label="Emails"
+      title="disabled with emails & label"
+    />
+  </>
+);
+
 const InputEmailChipMetaData = {
   title: "InputEmailChip",
   component: InputEmailChipDemo,
@@ -33,24 +54,3 @@ const Template = args => {
     </Container>
   );
 };
-
-export const InputEmailChipDemo = () => (
-  <>
-    <Template
-      emails={["oliver@example.com", "john@example.com"]}
-      label="Emails"
-      title="emails & label"
-    />
-    <Template
-      emails={["oliver@example.com", "john@example.com"]}
-      title="emails Only"
-    />
-    <Template label="Emails" title="label only" />
-    <Template
-      disabled
-      emails={["oliver@example.com", "john@example.com"]}
-      label="Emails"
-      title="disabled with emails & label"
-    />
-  </>
-);

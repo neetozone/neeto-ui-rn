@@ -6,14 +6,12 @@ import { MentionInput } from "react-native-controlled-mentions";
 import { moderateScale } from "react-native-size-matters";
 import { ThemeContext } from "styled-components/native";
 
-import {
-  Touchable,
-  Avatar,
-  Typography,
-  Card,
-  Divider,
-  Container,
-} from "@components";
+import { Avatar } from "../Avatar";
+import { Card } from "../Card";
+import { Container } from "../Container";
+import { Divider } from "../Divider";
+import { Touchable } from "../Touchable";
+import { Typography } from "../Typography";
 
 export const MentionsInputWrapper = forwardRef(
   ({ suggestions, shouldShowSuggestions, ...rest }, ref) => {

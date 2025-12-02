@@ -67,7 +67,8 @@ This component supports below props categories from styled-system.
 >    </Container>
 >  );
 > }
-`}
+`,
+  },
 };
 
 export default CheckBoxStories;
@@ -81,7 +82,7 @@ export const CheckBoxDemo = args => {
         checked={checked}
         disabled={disabled}
         label={label}
-        onSelect={() => { }}
+        onSelect={() => {}}
       />
     </Container>
   );
