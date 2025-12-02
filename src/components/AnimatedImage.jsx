@@ -13,7 +13,9 @@ import styled from "styled-components/native";
 import { flexbox, space, border, color, layout } from "styled-system";
 
 import ImagePlaceholder from "@assets/images/image-placeholder.svg";
-import { Container, Loader } from "@components";
+
+import { Container } from "./Container";
+import { Loader } from "./Loader";
 
 import { theme } from "../theme";
 

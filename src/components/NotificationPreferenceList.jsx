@@ -3,13 +3,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { moderateScale } from "react-native-size-matters";
 
-import {
-  Container,
-  Typography,
-  Divider,
-  ToggleSwitch,
-  Loader,
-} from "@components";
+import { Container } from "./Container";
+import { Divider } from "./Divider";
+import { Loader } from "./Loader";
+import { ToggleSwitch } from "./ToggleSwitch";
+import { Typography } from "./Typography";
 
 /**
  *
@@ -26,7 +24,7 @@ import {
  *
  * export default function Main() {
  *  const [data, setData] = useState([]);
- * 
+ *
  *  const handleSwitch = (item, index) => {
  *    setData(prevData => {
  *      const newData = [...prevData];

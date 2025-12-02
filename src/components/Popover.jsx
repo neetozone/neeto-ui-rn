@@ -7,7 +7,8 @@ import { moderateScale } from "react-native-size-matters";
 import styled from "styled-components/native";
 import { flexbox, space, border, color, layout } from "styled-system";
 
-import { Typography, Divider } from "@components";
+import { Divider } from "./Divider";
+import { Typography } from "./Typography";
 
 export const TouchableOpacity = styled.TouchableOpacity`
   ${space}

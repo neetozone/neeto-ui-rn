@@ -12,7 +12,8 @@ import Animated, {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { moderateScale } from "react-native-size-matters";
 
-import { Container, Typography } from "@components";
+import { Container } from "./Container";
+import { Typography } from "./Typography";
 
 const TabElement = ({
   isFocused,

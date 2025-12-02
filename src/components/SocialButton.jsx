@@ -7,7 +7,11 @@ import { ThemeContext } from "styled-components/native";
 
 import AppleLogo from "@assets/icons/apple-logo.svg";
 import GoogleLogo from "@assets/icons/google-logo.svg";
-import { Container, Typography, Touchable, Loader } from "@components";
+
+import { Container } from "./Container";
+import { Loader } from "./Loader";
+import { Touchable } from "./Touchable";
+import { Typography } from "./Typography";
 
 /**
  *

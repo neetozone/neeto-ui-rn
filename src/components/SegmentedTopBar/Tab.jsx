@@ -4,7 +4,8 @@ import { View, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 import { moderateScale } from "react-native-size-matters";
 
-import { Typography, Touchable } from "@components";
+import { Touchable } from "../Touchable";
+import { Typography } from "../Typography";
 
 export const Tab = forwardRef(
   ({ label, value, navigation, flex, count }, ref) => {

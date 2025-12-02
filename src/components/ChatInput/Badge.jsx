@@ -3,7 +3,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { moderateScale } from "react-native-size-matters";
 
-import { Container, Typography } from "@components";
+import { Container } from "../Container";
+import { Typography } from "../Typography";
 
 export const Badge = ({ text, isNoteOptionSelected }) => (
   <Container

@@ -8,7 +8,7 @@ import {
 } from "react-native-safe-area-context";
 import { ThemeContext } from "styled-components/native";
 
-import { Container } from "@components";
+import { Container } from "./Container";
 
 import { useKeyboard } from "../hooks/useKeyboard";
 

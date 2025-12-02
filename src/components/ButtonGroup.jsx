@@ -3,31 +3,33 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { moderateScale } from "react-native-size-matters";
 
-import { Container, Typography, Touchable } from "@components";
+import { Container } from "./Container";
+import { Touchable } from "./Touchable";
+import { Typography } from "./Typography";
 
 /**
  * ButtonGroup is a linear set of segments, each of which function as a button that can display a different view/or perform a different action.
  * <div class="screenshots">
  *   <img src="screenshots/buttonGroup/buttonGroup.png" />
  * </div>
- * 
+ *
  * ## Usage
  * ```js
  * import React, { useState } from 'react';
  * import { ButtonGroup } from '@bigbinary/neetoui-rn';
- * 
+ *
  * export default function Main(){
  *  const buttonItems = ["Button1", "Button2"];
  *  const [activeButton, setActiveButton] = useState(buttonItems[0]);
- *  
+ *
  *  return(
  *   <ButtonGroup
  *     buttonItems={buttonItems}
  *     onPress={setActiveButton}
  *     currentActiveBtn={activeButton}
- *    />    
+ *    />
  *  );
- * } 
+ * }
 
  * ```
  */

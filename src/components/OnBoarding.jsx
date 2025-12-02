@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { moderateScale } from "react-native-size-matters";
 
-import { Button, Carousel, Container, Typography } from "@components";
+import { Button } from "./Button";
+import { Carousel } from "./Carousel";
+import { Container } from "./Container";
+import { Typography } from "./Typography";
 
 /**
  *

@@ -4,7 +4,9 @@ import { Close } from "@bigbinary/neeto-icons-rn";
 import PropTypes from "prop-types";
 import { moderateScale } from "react-native-size-matters";
 
-import { Typography, Touchable, Container } from "@components";
+import { Container } from "./Container";
+import { Touchable } from "./Touchable";
+import { Typography } from "./Typography";
 
 const variantStyleObj = {
   solid: {
