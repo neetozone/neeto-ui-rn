@@ -196,11 +196,6 @@ export const Toast = ({ toasterConfig, ...rest }) => {
 Toast.show = T.show;
 Toast.hide = T.hide;
 
-Toast.defaultProps = {
-  text1: "",
-  text2: "",
-};
-
 Toast.propTypes = {
   /**
    * configuration

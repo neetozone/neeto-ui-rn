@@ -60,7 +60,7 @@ import { Tab } from "./Tab";
 export const SegmentedTopBar = ({
   state: { routes, index },
   navigation,
-  height,
+  height = moderateScale(48),
   descriptors,
 }) => {
   const containerRef = useRef();
@@ -168,9 +168,4 @@ SegmentedTopBar.propTypes = {
   height: PropTypes.number,
   navigation: PropTypes.object,
   descriptors: PropTypes.object,
-};
-
-SegmentedTopBar.defaultProps = {
-  tabs: [],
-  height: moderateScale(48),
 };

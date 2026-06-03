@@ -1,12 +1,6 @@
 import React, { useRef } from "react";
 
-import {
-  ChatInput,
-  Button,
-  Typography,
-  AnimatedImage,
-  Container,
-} from "@components";
+import { ChatInput, Button, Typography, Container } from "@components";
 
 export const ChatInputs = () => {
   const chatInputRef = useRef();
@@ -57,16 +51,6 @@ export const ChatInputs = () => {
           suggestions={suggestions}
           toEmails={["oliver@example.com"]}
           value={value}
-          Attachments={
-            <Container alignItems="flex-start">
-              <AnimatedImage
-                imageHeight={30}
-                imageUrl="https://picsum.photos/255/139"
-                imageWidth={30}
-                resizeMode="cover"
-              />
-            </Container>
-          }
           onChangeText={setValue}
           onAddNote={() => {
             alert("On Add Note");

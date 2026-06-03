@@ -76,7 +76,7 @@ const defaultRippleConfig = {
 };
 
 export const Touchable = React.forwardRef((props, ref) => {
-  const { children, elevation, rippleConfig, ...rest } = props;
+  const { children, elevation, rippleConfig = {}, ...rest } = props;
   const shadowStyles = elevation ? getShadowStyles(elevation) : {};
 
   const rippleProps = {
@@ -124,10 +124,6 @@ Touchable.propTypes = {
     size: PropTypes.number,
     containerBorderRadius: PropTypes.number,
   }),
-};
-
-Touchable.defaultProps = {
-  rippleConfig: {},
 };
 
 Touchable.displayName = "Touchable";

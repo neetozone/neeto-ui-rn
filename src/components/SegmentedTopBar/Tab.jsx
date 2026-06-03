@@ -8,7 +8,7 @@ import { Touchable } from "../Touchable";
 import { Typography } from "../Typography";
 
 export const Tab = forwardRef(
-  ({ label, value, navigation, flex, count }, ref) => {
+  ({ label, value, navigation, flex = 1, count }, ref) => {
     const handleOnPress = useCallback(
       () => navigation.navigate(value),
       [navigation, value]
@@ -69,8 +69,4 @@ Tab.propTypes = {
   value: PropTypes.string.isRequired,
   navigation: PropTypes.object,
   count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Tab.defaultProps = {
-  flex: 1,
 };

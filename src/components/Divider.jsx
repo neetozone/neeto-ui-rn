@@ -37,7 +37,12 @@ const View = styled.View`
   ${layout}
 `;
 
-export const Divider = ({ thickness, orientation, bg, ...rest }) => {
+export const Divider = ({
+  thickness = moderateScale(1),
+  orientation = "horizontal",
+  bg = "background.grey400",
+  ...rest
+}) => {
   const isHorizontal = orientation === "horizontal";
   const lineStyles = isHorizontal
     ? {
@@ -51,12 +56,6 @@ export const Divider = ({ thickness, orientation, bg, ...rest }) => {
       };
 
   return thickness > 0 && <View bg={bg} {...lineStyles} />;
-};
-
-Divider.defaultProps = {
-  bg: "background.grey400",
-  orientation: "horizontal",
-  thickness: moderateScale(1),
 };
 
 Divider.propTypes = {

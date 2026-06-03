@@ -75,17 +75,17 @@ export const BUTTON_VARIANTS = Object.freeze({
 export const Button = React.forwardRef(
   (
     {
-      variant,
+      variant = "solid",
       label,
       labelStyle,
       RightIcon,
       LeftIcon,
       disabled,
-      isLoading,
-      loadingText,
+      isLoading = false,
+      loadingText = "",
       fontFamily,
       color,
-      fontSize,
+      fontSize = "m",
       ...rest
     },
     ref
@@ -223,13 +223,6 @@ export const Button = React.forwardRef(
     );
   }
 );
-
-Button.defaultProps = {
-  variant: "solid",
-  isLoading: false,
-  loadingText: "",
-  fontSize: "m",
-};
 
 Button.propTypes = {
   ...propTypes.buttonStyle,

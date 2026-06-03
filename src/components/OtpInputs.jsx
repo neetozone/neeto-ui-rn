@@ -82,8 +82,8 @@ export const OtpInputs = ({
   numberOfInputs = 4,
   error = false,
   code = "",
-  containerStyles,
-  textStyles,
+  containerStyles = {},
+  textStyles = {},
 }) => {
   const inputRef = React.useRef();
   useEffect(() => {
@@ -160,11 +160,6 @@ export const OtpInputs = ({
       </Container>
     </Container>
   );
-};
-
-OtpInputs.defaultProps = {
-  containerStyles: {},
-  textStyles: {},
 };
 
 OtpInputs.propTypes = {
