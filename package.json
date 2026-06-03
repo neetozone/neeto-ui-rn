@@ -1,7 +1,7 @@
 {
   "name": "@bigbinary/neetoui-rn",
   "version": "2.0.6",
-  "main": ".",
+  "main": "./src/index.js",
   "author": "BigBinary",
   "license": "MIT",
   "description": "The neetoUI-RN library drives the experience in all neeto product's React Native applications built at BigBinary.",
@@ -55,7 +55,6 @@
     "react-native-calendars": ">=1.1313.0",
     "react-native-controlled-mentions": "^2.2.5",
     "react-native-modal": "^13.0.0",
-    "react-native-safe-area-context": "^3.3.2",
     "react-native-pell-rich-editor": "^1.9.0",
     "react-native-popover-view": "^5.1.7",
     "react-native-size-matters": "^0.4.0",
