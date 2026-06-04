@@ -35,14 +35,14 @@ import { Typography } from "./Typography";
  */
 
 export const ButtonGroup = ({
-  activeColor,
-  inActiveColor,
+  activeColor = "background.grey600",
+  inActiveColor = "background.white",
   buttonItems,
   onPress,
   currentActiveBtn,
-  wrapperStyle,
-  buttonStyle,
-  buttonTextStyle,
+  wrapperStyle = {},
+  buttonStyle = {},
+  buttonTextStyle = { ellipsizeMode: "tail", numberOfLines: 1 },
 }) => (
   <Container
     alignSelf="center"
@@ -77,14 +77,6 @@ export const ButtonGroup = ({
     ))}
   </Container>
 );
-
-ButtonGroup.defaultProps = {
-  activeColor: "background.grey600",
-  inActiveColor: "background.white",
-  wrapperStyle: {},
-  buttonTextStyle: { ellipsizeMode: "tail", numberOfLines: 1 },
-  buttonStyle: {},
-};
 
 ButtonGroup.propTypes = {
   /**

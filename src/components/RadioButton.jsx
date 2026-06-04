@@ -57,8 +57,8 @@ import { Typography } from "./Typography";
  */
 
 export const RadioButton = ({
-  selected,
-  onSelect,
+  selected = false,
+  onSelect = () => {},
   disabled,
   label,
   selectIconStyle,
@@ -148,9 +148,4 @@ RadioButton.propTypes = {
    * Customize label style.
    */
   labelStyle: Proptypes.object,
-};
-
-RadioButton.defaultProps = {
-  selected: false,
-  onSelect: () => {},
 };

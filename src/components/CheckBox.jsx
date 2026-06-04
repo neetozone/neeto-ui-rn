@@ -59,13 +59,13 @@ import { Typography } from "./Typography";
  */
 
 export const CheckBox = ({
-  checked,
-  onSelect,
+  checked = false,
+  onSelect = () => {},
   disabled,
   label,
   checkIconStyle,
   labelStyle,
-  isRequiredLabel,
+  isRequiredLabel = false,
   ...rest
 }) => {
   const theme = useContext(ThemeContext);
@@ -152,10 +152,4 @@ CheckBox.propTypes = {
    * To add required label
    */
   isRequiredLabel: PropTypes.bool,
-};
-
-CheckBox.defaultProps = {
-  checked: false,
-  onSelect: () => {},
-  isRequiredLabel: false,
 };

@@ -143,19 +143,19 @@ Title.propTypes = {
  */
 
 export const BottomSheet = ({
-  showCreateOption,
-  CreateItemComponent,
-  showCreateOptionLoader,
+  showCreateOption = false,
+  CreateItemComponent = null,
+  showCreateOptionLoader = false,
   createSearchedOptionLabelStyle,
-  createOptionLabel,
-  onPressCreateOption,
+  createOptionLabel = null,
+  onPressCreateOption = () => {},
   createSearchedOptionContainerStyle,
   data = [],
   title,
   hide,
   isVisible,
   onItemPress,
-  bg,
+  bg = "background.primary",
   children,
   titleContainerStyle,
   titleTextStyle,
@@ -164,17 +164,17 @@ export const BottomSheet = ({
   ContentRow,
   contentType,
   canSearch,
-  onDonePress,
+  onDonePress = () => {},
   disabled,
   noResultsLabelContainerStyle,
   noResultsLabelStyle,
   noResultsLabel,
   NoResultsComponent,
-  labelExtractor,
-  valueExtractor,
+  labelExtractor = () => {},
+  valueExtractor = () => {},
   selectedItem,
-  onBackdropPress,
-  searchBarProps,
+  onBackdropPress = () => {},
+  searchBarProps = {},
   shouldHideKeyboardOnScrollBegin = true,
   shouldShowItemSeparator = true,
   flatListRef,
@@ -358,20 +358,6 @@ export const BottomSheet = ({
       </SafeAreaView>
     </Modal>
   );
-};
-
-BottomSheet.defaultProps = {
-  bg: "background.primary",
-  showCreateOption: false,
-  showCreateOptionLoader: false,
-  createOptionLabel: null,
-  onPressCreateOption: () => {},
-  CreateItemComponent: null,
-  onDonePress: () => {},
-  valueExtractor: () => {},
-  labelExtractor: () => {},
-  onBackdropPress: () => {},
-  searchBarProps: {},
 };
 
 BottomSheet.propTypes = {

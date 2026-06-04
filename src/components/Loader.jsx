@@ -48,7 +48,10 @@ const AnimatedCircle = Animated.createAnimatedComponent(Circle);
  *
  */
 
-export const Loader = ({ color, size }) => {
+export const Loader = ({
+  color = theme.colors.background.lightBlue400,
+  size = "s",
+}) => {
   const progress = useSharedValue(0);
   const width = LOADER_WIDTH[size];
   const stroke_width = width * 0.15;
@@ -115,9 +118,4 @@ Loader.propTypes = {
    * Color variant to select the color from the available options.
    */
   color: PropTypes.string,
-};
-
-Loader.defaultProps = {
-  size: "s",
-  color: theme.colors.background.lightBlue400,
 };

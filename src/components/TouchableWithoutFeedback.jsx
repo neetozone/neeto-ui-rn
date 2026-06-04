@@ -40,8 +40,6 @@ const TouchableWithoutFeedback = ({ onPress, onPressIn, ...props }) => {
   );
 };
 
-TouchableWithoutFeedback.defaultProps = {};
-
 TouchableWithoutFeedback.propTypes = {
   onPress: PropTypes.func,
   onPressIn: PropTypes.func,

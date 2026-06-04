@@ -46,6 +46,8 @@ export const Avatar = ({
   bgColor = "background.lightBlue100",
   fontColor = "font.darkBlue100",
   imageUrl,
+  alignItems = "center",
+  justifyContent = "center",
   ...rest
 }) => {
   const opacity = useSharedValue(0);
@@ -82,9 +84,11 @@ export const Avatar = ({
 
   return (
     <Container
+      alignItems={alignItems}
       bg={bgColor}
       borderRadius={avatarSize / 2}
       height={avatarSize}
+      justifyContent={justifyContent}
       width={avatarSize}
       {...rest}
       flexDirection="row"
@@ -118,11 +122,6 @@ const styles = StyleSheet.create({
   },
 });
 
-Avatar.defaultProps = {
-  alignItems: "center",
-  justifyContent: "center",
-};
-
 Avatar.propTypes = {
   /**
    * Name to obtain user initials to show as the text in the Avatar.
@@ -144,4 +143,6 @@ Avatar.propTypes = {
    * Image to display for the Avatar. It accepts a standard React Native Image source prop Or a function that returns an Image.
    */
   imageUrl: PropTypes.string,
+  alignItems: PropTypes.string,
+  justifyContent: PropTypes.string,
 };

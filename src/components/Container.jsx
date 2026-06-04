@@ -13,13 +13,15 @@ const View = styled.View`
   ${layout}
 `;
 
-export const Container = ({ children, ...rest }) => (
-  <View {...rest}>{children}</View>
+export const Container = ({
+  children,
+  color = "background.primary",
+  ...rest
+}) => (
+  <View color={color} {...rest}>
+    {children}
+  </View>
 );
-
-Container.defaultProps = {
-  color: "background.primary",
-};
 
 Container.propTypes = {
   ...propTypes.flexbox,

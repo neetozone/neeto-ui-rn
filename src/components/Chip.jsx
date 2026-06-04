@@ -62,16 +62,16 @@ const commonContainerStyle = {
 export const Chip = ({
   label,
   LeftIcon,
-  variant,
-  labelColor,
-  closeIconBackground,
-  closeIconColor,
+  variant = "outlined",
+  labelColor = "font.primary",
+  closeIconBackground = "background.grey500",
+  closeIconColor = "white",
   onClose,
   onChipPress,
-  isDisabled,
-  closeIconSize,
-  closeIcon: CloseIcon,
-  closeIconProps,
+  isDisabled = false,
+  closeIconSize = moderateScale(14),
+  closeIcon: CloseIcon = Close,
+  closeIconProps = { viewBox: "0 0 25 25" },
   containerStyle,
   closeIconContainerStyle,
 }) => (
@@ -116,17 +116,6 @@ export const Chip = ({
     )}
   </Container>
 );
-
-Chip.defaultProps = {
-  variant: "outlined",
-  labelColor: "font.primary",
-  closeIconBackground: "background.grey500",
-  closeIconColor: "white",
-  closeIconProps: { viewBox: "0 0 25 25" },
-  isDisabled: false,
-  closeIconSize: moderateScale(14),
-  closeIcon: Close,
-};
 
 Chip.propTypes = {
   /**

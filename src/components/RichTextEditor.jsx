@@ -76,11 +76,11 @@ export const ScrollView = styled.ScrollView.attrs(() => ({
 
 export const RichTextEditor = ({
   onChange,
-  placeholderText,
+  placeholderText = "Type here...",
   children,
   toolbarActions,
-  editorProps,
-  toolBarProps,
+  editorProps = {},
+  toolBarProps = {},
   richTextRef: externalRichTextRef,
   ...rest
 }) => {
@@ -132,13 +132,6 @@ export const RichTextEditor = ({
       {children}
     </ScrollView>
   );
-};
-
-RichTextEditor.defaultProps = {
-  editorProps: {},
-  toolBarProps: {},
-  toolbarWrapperStyle: {},
-  placeholderText: "Type here...",
 };
 
 RichTextEditor.propTypes = {

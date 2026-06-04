@@ -88,6 +88,7 @@ export const Typography = ({
   children,
   fontSize,
   lineHeightMultiplier = 1.3,
+  textStyle = "defaultTextStyle",
   style,
   ...rest
 }) => {
@@ -120,6 +121,7 @@ export const Typography = ({
       android_hyphenationFrequency="full"
       fontSize={fontSize}
       textBreakStrategy="simple"
+      textStyle={textStyle}
       {...rest}
       style={[
         Platform.OS === "android" && {
@@ -144,9 +146,4 @@ Typography.propTypes = {
   fontSize: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   lineHeightMultiplier: PropTypes.number,
   style: PropTypes.object,
-};
-
-Typography.defaultProps = {
-  textStyle: "defaultTextStyle",
-  lineHeightMultiplier: 1.3,
 };

@@ -48,7 +48,18 @@ import { Touchable } from "./Touchable";
  */
 
 // eslint-disable-next-line @bigbinary/neeto/no-dangling-constants
-export const FAB = ({ Icon, bg, disabled, variant, onPress, ...rest }) => {
+export const FAB = ({
+  Icon,
+  bg,
+  disabled,
+  variant = "solid",
+  onPress,
+  size = moderateScale(56),
+  alignItems = "center",
+  justifyContent = "center",
+  borderRadius = moderateScale(28),
+  ...rest
+}) => {
   const shadowStyle = {
     shadowColor: theme.colors.background.grey800,
     shadowOffset: {
@@ -73,19 +84,15 @@ export const FAB = ({ Icon, bg, disabled, variant, onPress, ...rest }) => {
       variant={variant}
       onPress={onPress}
       {...(variant !== "inverse" ? { borderColor: bg } : {})}
+      alignItems={alignItems}
+      borderRadius={borderRadius}
+      justifyContent={justifyContent}
+      size={size}
       {...rest}
     >
       <Icon />
     </Touchable>
   );
-};
-
-FAB.defaultProps = {
-  variant: "solid",
-  size: moderateScale(56),
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: moderateScale(28),
 };
 
 FAB.propTypes = {
