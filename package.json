@@ -1,6 +1,6 @@
 {
   "name": "@bigbinary/neetoui-rn",
-  "version": "2.0.6",
+  "version": "2.1.0",
   "main": "./src/index.js",
   "author": "BigBinary",
   "license": "MIT",
@@ -66,12 +66,12 @@
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.12.9",
-    "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "@babel/eslint-parser": "^7.19.1",
+    "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "@babel/runtime": "^7.12.5",
     "@bigbinary/eslint-plugin-neeto": "^1.0.15",
-    "@bigbinary/neeto-commons-frontend": "^2.0.129",
     "@bigbinary/neeto-cist": "^1.0.6",
+    "@bigbinary/neeto-commons-frontend": "^2.0.129",
     "@react-native-async-storage/async-storage": "^1.15.11",
     "@react-native-community/datetimepicker": "^3.5.2",
     "@react-native-community/eslint-config": "^3.0.1",
