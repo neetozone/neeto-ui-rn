@@ -11,6 +11,10 @@ function createPackageFile() {
     JSON.parse(packageData)
   );
 
+  // The dist folder is published as the package root, so "main" must point to
+  // the entry file relative to dist, not to the source tree.
+  packageJSON.main = "./index.js";
+
   return fse.writeFile(
     `./${BUILD_FOLDER}/package.json`,
     JSON.stringify(packageJSON, null, 2),

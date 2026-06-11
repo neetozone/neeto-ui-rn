@@ -39,6 +39,7 @@
     ]
   },
   "peerDependencies": {
+    "@shopify/flash-list": ">=2.3.1",
     "react-native-device-info": "^10.3.0",
     "react-native-reanimated": ">=3.6.0",
     "react-native-safe-area-context": ">=3.3.2",
@@ -47,7 +48,6 @@
   },
   "dependencies": {
     "@bigbinary/neeto-icons-rn": "^1.0.7",
-    "@shopify/flash-list": "^1.2.0",
     "@styled-system/prop-types": "^5.1.5",
     "dayjs": "^1.11.4",
     "node-html-parser": "^6.1.5",
@@ -79,6 +79,7 @@
     "@react-navigation/bottom-tabs": "^6.3.2",
     "@react-navigation/material-top-tabs": "^6.2.2",
     "@react-navigation/native": "^6.0.11",
+    "@shopify/flash-list": "^2.3.1",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-controls": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",

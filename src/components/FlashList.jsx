@@ -146,12 +146,21 @@ const FadeInFlatList = React.forwardRef(
       item: PropTypes.object,
     };
 
-    const renderItem = item =>
-      isLoading || item.index < props.placeHolderItemCount ? (
-        <Item item={item} />
+    const shouldAnimate = animationDuration > 0;
+
+    const renderItem = item => {
+      if (isLoading || item.index < props.placeHolderItemCount) {
+        return <Item item={item} />;
+      }
+
+      return shouldAnimate ? (
+        <FadeInComponent index={item.index}>
+          {originalRenderItem(item)}
+        </FadeInComponent>
       ) : (
         originalRenderItem(item)
       );
+    };
 
     useEffect(() => {
       value.value = 0;
