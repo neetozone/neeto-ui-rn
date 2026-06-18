@@ -2,7 +2,8 @@ import React from "react";
 
 import { Close } from "@bigbinary/neeto-icons-rn";
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
+
+import { moderateScale } from "@utils/scale";
 
 import { Container } from "./Container";
 import { Touchable } from "./Touchable";

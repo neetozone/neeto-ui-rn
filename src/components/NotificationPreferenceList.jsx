@@ -1,7 +1,8 @@
 import React from "react";
 
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
+
+import { moderateScale } from "@utils/scale";
 
 import { Container } from "./Container";
 import { Divider } from "./Divider";

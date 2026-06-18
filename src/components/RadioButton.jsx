@@ -2,8 +2,9 @@ import React, { useContext } from "react";
 
 import { Radio, RadioInactive } from "@bigbinary/neeto-icons-rn";
 import Proptypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 import { ThemeContext } from "styled-components/native";
+
+import { moderateScale } from "@utils/scale";
 
 import { Touchable } from "./Touchable";
 import { Typography } from "./Typography";
@@ -27,7 +28,7 @@ import { Typography } from "./Typography";
  *  ## Usage
  * ```js
  * import * as React from "react";
- * import { moderateScale } from "react-native-size-matters";
+ * import { moderateScale } from "@utils/scale";
  * import { Container, RadioButton } from "@bigbinary/neetoui-rn";
  *
  * export default function Main() {

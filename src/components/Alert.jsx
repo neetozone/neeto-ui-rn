@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { StyleSheet } from "react-native";
 
 import Modal from "react-native-modal";
-import { moderateScale } from "react-native-size-matters";
+
+import { moderateScale } from "@utils/scale";
 
 import { Button } from "./Button";
 import { Container } from "./Container";
@@ -71,7 +72,7 @@ let rootLevelRef = null;
  *  ## Usage
  * ```js
  *import * as React from "react";
- *import { moderateScale } from "react-native-size-matters";
+ *import { moderateScale } from "@utils/scale";
  *import { Alert } from "@bigbinary/neetoui-rn";
  *export function App(props) {
  *  return (
@@ -83,7 +84,7 @@ let rootLevelRef = null;
  *}
  *
  *import * as React from "react";
- *import { moderateScale } from "react-native-size-matters";
+ *import { moderateScale } from "@utils/scale";
  *import { Alert, Button } from "@bigbinary/neetoui-rn";
  *
  *export default function Main() {

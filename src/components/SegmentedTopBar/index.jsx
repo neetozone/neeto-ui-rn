@@ -8,9 +8,9 @@ import React, {
 import { StyleSheet, View } from "react-native";
 
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 
 import { theme } from "@theme";
+import { moderateScale } from "@utils/scale";
 
 import { Indicator } from "./Indicator";
 import { Tab } from "./Tab";

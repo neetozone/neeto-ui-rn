@@ -3,8 +3,9 @@ import { Animated } from "react-native";
 
 import { Check, Close } from "@bigbinary/neeto-icons-rn";
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 import { ThemeContext } from "styled-components/native";
+
+import { moderateScale } from "@utils/scale";
 
 import { Container } from "./Container";
 import { Touchable } from "./Touchable";

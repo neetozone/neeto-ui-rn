@@ -8,9 +8,9 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
-import { moderateScale } from "react-native-size-matters";
 
 import { theme } from "@theme";
+import { moderateScale } from "@utils/scale";
 
 const springConfig = {
   mass: 1,

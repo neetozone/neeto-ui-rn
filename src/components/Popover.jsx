@@ -3,9 +3,10 @@ import { StyleSheet } from "react-native";
 
 import PropTypes from "prop-types";
 import OriginalPopover from "react-native-popover-view";
-import { moderateScale } from "react-native-size-matters";
 import styled from "styled-components/native";
 import { flexbox, space, border, color, layout } from "styled-system";
+
+import { moderateScale } from "@utils/scale";
 
 import { Divider } from "./Divider";
 import { Typography } from "./Typography";

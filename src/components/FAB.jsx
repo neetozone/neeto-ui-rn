@@ -2,9 +2,9 @@ import * as React from "react";
 
 import propTypes from "@styled-system/prop-types";
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 
 import { theme } from "@theme";
+import { moderateScale } from "@utils/scale";
 
 import { Touchable } from "./Touchable";
 

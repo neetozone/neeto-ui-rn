@@ -10,7 +10,6 @@ import {
 } from "react-native";
 
 import PropTypes from "prop-types";
-import { moderateScale as scaleItem } from "react-native-size-matters";
 import styled, { ThemeContext } from "styled-components/native";
 import {
   flexbox,
@@ -24,6 +23,8 @@ import {
   system,
   position,
 } from "styled-system";
+
+import { moderateScale as scaleItem } from "@utils/scale";
 
 import { Button } from "./Button";
 import { Container } from "./Container";

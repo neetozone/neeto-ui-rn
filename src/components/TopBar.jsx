@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { ScrollView, StyleSheet } from "react-native";
 
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 
 import { theme } from "@theme";
+import { moderateScale } from "@utils/scale";
 
 import { Container } from "./Container";
 import { Touchable } from "./Touchable";

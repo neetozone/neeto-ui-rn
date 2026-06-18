@@ -4,7 +4,6 @@ import { TouchableWithoutFeedback } from "react-native";
 import { Close, Search } from "@bigbinary/neeto-icons-rn";
 import PropTypes from "prop-types";
 import { Easing, useSharedValue, withTiming } from "react-native-reanimated";
-import { moderateScale } from "react-native-size-matters";
 import styled from "styled-components/native";
 import {
   flexbox,
@@ -17,6 +16,7 @@ import {
 
 import { useDebounce } from "@hooks";
 import { theme } from "@theme";
+import { moderateScale } from "@utils/scale";
 
 import { Container } from "./Container";
 import { Touchable } from "./Touchable";

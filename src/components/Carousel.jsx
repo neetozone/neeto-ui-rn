@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { StyleSheet, Dimensions, useWindowDimensions } from "react-native";
 
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 import CarouselParent, { Pagination } from "react-native-snap-carousel";
+
+import { moderateScale } from "@utils/scale";
 
 import { Container } from "./Container";
 
@@ -28,7 +29,7 @@ const { width } = Dimensions.get("screen");
  *  ## Usage
  * ```js
  * import * as React from "react";
- * import { moderateScale } from "react-native-size-matters";
+ * import { moderateScale } from "@utils/scale";
  * import { Carousel } from "@bigbinary/neetoui-rn";
  *
  * export default function Main() {

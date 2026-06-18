@@ -2,9 +2,10 @@ import * as React from "react";
 
 import propTypes from "@styled-system/prop-types";
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 import styled from "styled-components/native";
 import { flexbox, space, color, layout } from "styled-system";
+
+import { moderateScale } from "@utils/scale";
 
 /**
  *
