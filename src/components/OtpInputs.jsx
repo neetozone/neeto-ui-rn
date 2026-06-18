@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { InteractionManager, Keyboard } from "react-native";
 
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 import styled from "styled-components/native";
 import {
   flexbox,
@@ -12,6 +11,8 @@ import {
   typography,
   color,
 } from "styled-system";
+
+import { moderateScale } from "@utils/scale";
 
 import { Container } from "./Container";
 import { Typography } from "./Typography";

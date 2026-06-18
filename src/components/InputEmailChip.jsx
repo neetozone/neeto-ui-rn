@@ -2,8 +2,9 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { Platform } from "react-native";
 
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 import { ThemeContext } from "styled-components/native";
+
+import { moderateScale } from "@utils/scale";
 
 import { Chip } from "./Chip";
 import { Container } from "./Container";

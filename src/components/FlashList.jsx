@@ -13,10 +13,10 @@ import Animated, {
   withSequence,
   withTiming,
 } from "react-native-reanimated";
-import { moderateScale } from "react-native-size-matters";
 import { ThemeContext } from "styled-components/native";
 
 import { useRefreshByUser } from "@hooks";
+import { moderateScale } from "@utils/scale";
 
 const { width } = Dimensions.get("screen");
 const Placeholder = () => {

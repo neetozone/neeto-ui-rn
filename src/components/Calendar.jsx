@@ -3,8 +3,9 @@ import React, { useContext } from "react";
 import dayjs from "dayjs";
 import PropTypes from "prop-types";
 import { Calendar as RNCalender } from "react-native-calendars";
-import { moderateScale } from "react-native-size-matters";
 import { ThemeContext } from "styled-components/native";
+
+import { moderateScale } from "@utils/scale";
 
 /**
  *

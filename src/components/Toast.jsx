@@ -5,7 +5,6 @@ import { useWindowDimensions } from "react-native";
 import { Close } from "@bigbinary/neeto-icons-rn";
 import PropTypes from "prop-types";
 import DeviceInfo from "react-native-device-info";
-import { moderateScale } from "react-native-size-matters";
 import T from "react-native-toast-message";
 import { ThemeContext } from "styled-components/native";
 
@@ -14,6 +13,7 @@ import InfoIcon from "@assets/icons/info.svg";
 import SuccessIcon from "@assets/icons/success.svg";
 import WarningIcon from "@assets/icons/warning.svg";
 import { defaultToasterConfig } from "@config";
+import { moderateScale } from "@utils/scale";
 
 import { Card } from "./Card";
 import { Container } from "./Container";
@@ -152,7 +152,7 @@ ToastComponent.propTypes = {
  *
  *
  *import * as React from "react";
- *import { moderateScale } from "react-native-size-matters";
+ *import { moderateScale } from "@utils/scale";
  *import { Toast, Container, Button } from "@bigbinary/neetoui-rn";
  *
  *export default function Main() {

@@ -9,7 +9,6 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
-import { moderateScale } from "react-native-size-matters";
 import styled, { ThemeContext } from "styled-components/native";
 import {
   flexbox,
@@ -21,6 +20,8 @@ import {
   system,
   position,
 } from "styled-system";
+
+import { moderateScale } from "@utils/scale";
 
 import { Alert } from "./Alert";
 import { BottomSheet } from "./BottomSheet";

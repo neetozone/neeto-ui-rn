@@ -5,8 +5,9 @@ import {
   CheckboxInactive,
 } from "@bigbinary/neeto-icons-rn";
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 import { ThemeContext } from "styled-components/native";
+
+import { moderateScale } from "@utils/scale";
 
 import { Touchable } from "./Touchable";
 import { Typography } from "./Typography";
@@ -30,7 +31,7 @@ import { Typography } from "./Typography";
  *  ## Usage
  * ```js
  * import * as React from "react";
- * import { moderateScale } from "react-native-size-matters";
+ * import { moderateScale } from "@utils/scale";
  * import { Container, CheckBox } from "@bigbinary/neetoui-rn";
  *
  * export default function Main() {

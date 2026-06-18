@@ -2,11 +2,11 @@ import * as React from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
 
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 import styled from "styled-components/native";
 import { flexbox, space, border, color, layout } from "styled-system";
 
 import { theme } from "@theme";
+import { moderateScale } from "@utils/scale";
 
 import { getShadowStyles } from "../utils";
 

@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 import { ThemeContext } from "styled-components/native";
+
+import { moderateScale } from "@utils/scale";
 
 import { Touchable } from "../Touchable";
 

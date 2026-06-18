@@ -2,7 +2,8 @@ import React from "react";
 
 import PropTypes from "prop-types";
 import Animated, { FadeInDown, FadeInUp } from "react-native-reanimated";
-import { moderateScale } from "react-native-size-matters";
+
+import { moderateScale } from "@utils/scale";
 
 import { Badge } from "./Badge";
 

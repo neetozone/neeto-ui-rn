@@ -10,10 +10,10 @@ import Animated, {
   useAnimatedStyle,
   interpolate,
 } from "react-native-reanimated";
-import { moderateScale } from "react-native-size-matters";
 import Svg, { Circle } from "react-native-svg";
 
 import { theme } from "@theme";
+import { moderateScale } from "@utils/scale";
 
 import { Container } from "./Container";
 

@@ -18,7 +18,7 @@ import { useKeyboard } from "../hooks/useKeyboard";
  *  ## Usage
  * ```js
  * import * as React from "react";
- * import { moderateScale } from "react-native-size-matters";
+ * import { moderateScale } from "@utils/scale";
  * import { Typography, ParentView } from "@bigbinary/neetoui-rn";
  *
  *export default function Main() {

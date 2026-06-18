@@ -9,7 +9,8 @@ import {
 } from "react-native";
 
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
+
+import { moderateScale } from "@utils/scale";
 
 import TouchableWithoutFeedback from "./TouchableWithoutFeedback";
 

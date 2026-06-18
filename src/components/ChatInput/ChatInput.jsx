@@ -17,10 +17,10 @@ import {
 } from "@bigbinary/neeto-icons-rn";
 import { parse } from "node-html-parser";
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 
 import ExpandSVG from "@assets/icons/expand.svg";
 import MinimizeSVG from "@assets/icons/minimize.svg";
+import { moderateScale } from "@utils/scale";
 
 import { AttachmentsView } from "./AttachmentsView";
 import { EmailFields } from "./EmailFields";
@@ -403,7 +403,7 @@ export const ChatInput = forwardRef(
                 <Container
                   bg="background.grey400"
                   mx={moderateScale(5)}
-                  p={moderateScale(0.4)}
+                  p={moderateScale(1)}
                 />
                 {onCannedResponse &&
                   showCannedResponsesFor.includes(selectedOption) && (

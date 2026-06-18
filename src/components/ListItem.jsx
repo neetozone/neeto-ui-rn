@@ -2,7 +2,8 @@ import * as React from "react";
 
 import propTypes from "@styled-system/prop-types";
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
+
+import { moderateScale } from "@utils/scale";
 
 import { Container } from "./Container";
 import { Typography } from "./Typography";

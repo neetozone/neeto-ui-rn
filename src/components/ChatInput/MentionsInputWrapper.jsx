@@ -3,8 +3,9 @@ import { ScrollView, StyleSheet } from "react-native";
 
 import PropTypes from "prop-types";
 import { MentionInput } from "react-native-controlled-mentions";
-import { moderateScale } from "react-native-size-matters";
 import { ThemeContext } from "styled-components/native";
+
+import { moderateScale } from "@utils/scale";
 
 import { Avatar } from "../Avatar";
 import { Card } from "../Card";

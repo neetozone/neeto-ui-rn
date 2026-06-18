@@ -2,7 +2,8 @@ import React from "react";
 
 import PropTypes from "prop-types";
 import ContentLoader, { Rect } from "react-content-loader/native";
-import { moderateScale } from "react-native-size-matters";
+
+import { moderateScale } from "@utils/scale";
 
 import { theme } from "../theme";
 

@@ -10,7 +10,8 @@ import Animated, {
   Extrapolation,
 } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { moderateScale } from "react-native-size-matters";
+
+import { moderateScale } from "@utils/scale";
 
 import { Container } from "./Container";
 import { Typography } from "./Typography";
@@ -118,7 +119,7 @@ const styles = StyleSheet.create({
  * import { NavigationContainer } from '@react-navigation/native';
  * import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
  * import { ThemeContext } from "styled-components/native";
- * import { moderateScale } from "react-native-size-matters";
+ * import { moderateScale } from "@utils/scale";
  *
  * const Tab = createBottomTabNavigator();
  *

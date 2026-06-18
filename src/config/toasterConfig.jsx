@@ -2,10 +2,10 @@ import React from "react";
 import { Pressable, StyleSheet } from "react-native";
 
 import { Close } from "@bigbinary/neeto-icons-rn";
-import { moderateScale } from "react-native-size-matters";
 import Toast, { BaseToast } from "react-native-toast-message";
 
 import { theme } from "@theme";
+import { moderateScale } from "@utils/scale";
 
 const CloseButton = () => (
   <Pressable style={styles.closeButtonStyle} onPress={Toast.hide}>

@@ -4,5 +4,6 @@
   "@theme": "./src/theme",
   "@config": "./src/config",
   "@hooks": "./src/hooks",
-  "@contexts": "./src/contexts"
+  "@contexts": "./src/contexts",
+  "@utils": "./src/utils"
 }

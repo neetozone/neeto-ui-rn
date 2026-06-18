@@ -9,7 +9,6 @@ import { Animated, StyleSheet } from "react-native";
 
 import { Down } from "@bigbinary/neeto-icons-rn";
 import PropTypes from "prop-types";
-import { moderateScale } from "react-native-size-matters";
 import styled, { ThemeContext } from "styled-components/native";
 import {
   buttonStyle,
@@ -19,6 +18,8 @@ import {
   color,
   layout,
 } from "styled-system";
+
+import { moderateScale } from "@utils/scale";
 
 import { Container } from "./Container";
 

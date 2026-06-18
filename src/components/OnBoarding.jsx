@@ -2,7 +2,8 @@ import React, { useRef, useState } from "react";
 
 import PropTypes from "prop-types";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { moderateScale } from "react-native-size-matters";
+
+import { moderateScale } from "@utils/scale";
 
 import { Button } from "./Button";
 import { Carousel } from "./Carousel";
@@ -28,7 +29,7 @@ import { Typography } from "./Typography";
  *  ## Usage
  * ```js
  * import * as React from "react";
- * import { moderateScale } from "react-native-size-matters";
+ * import { moderateScale } from "@utils/scale";
  * import { OnBoarding } from "@bigbinary/neetoui-rn";
  *
  * export default function Main() {
