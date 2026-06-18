@@ -403,7 +403,7 @@ export const ChatInput = forwardRef(
                 <Container
                   bg="background.grey400"
                   mx={moderateScale(5)}
-                  p={moderateScale(0.4)}
+                  p={moderateScale(1)}
                 />
                 {onCannedResponse &&
                   showCannedResponsesFor.includes(selectedOption) && (
