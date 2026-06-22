@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 
 import PropTypes from "prop-types";
 import OriginalPopover from "react-native-popover-view";
@@ -162,6 +162,7 @@ PopOverItem.propTypes = {
 export const Popover = ({
   children,
   data,
+  from: fromElement,
   fontFamily = null,
   fontSize = "l",
   ...rest
@@ -173,6 +174,13 @@ export const Popover = ({
     <OriginalPopover
       popoverStyle={styles.popoverStyle}
       ref={popoverRef}
+      from={(sourceRef, showPopover) => (
+        <View collapsable={false} ref={sourceRef}>
+          {React.isValidElement(fromElement)
+            ? React.cloneElement(fromElement, { onPress: showPopover })
+            : null}
+        </View>
+      )}
       onCloseComplete={() => onPressItemRef.current()}
       onOpenStart={() => {
         onPressItemRef.current = () => {};
@@ -208,6 +216,7 @@ Popover.propTypes = {
    * }.
    */
   data: PropTypes.array,
+  from: PropTypes.element,
   fontFamily: PropTypes.string,
   fontSize: PropTypes.oneOfType([
     PropTypes.number,
