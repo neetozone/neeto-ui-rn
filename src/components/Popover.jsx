@@ -216,7 +216,7 @@ Popover.propTypes = {
    * }.
    */
   data: PropTypes.array,
-  from: PropTypes.node,
+  from: PropTypes.element,
   fontFamily: PropTypes.string,
   fontSize: PropTypes.oneOfType([
     PropTypes.number,
