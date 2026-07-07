@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Keyboard, StatusBar } from "react-native";
+import { Keyboard, StatusBar, TextInput } from "react-native";
 
 import PropTypes from "prop-types";
 import {
@@ -9,8 +9,6 @@ import {
 import { ThemeContext } from "styled-components/native";
 
 import { Container } from "./Container";
-
-import { useKeyboard } from "../hooks/useKeyboard";
 
 /**
  *ParentView wraps the children with SafeAreaView.
@@ -45,7 +43,6 @@ export const ParentView = ({
   ...rest
 }) => {
   const theme = useContext(ThemeContext);
-  const keyboardHeight = useKeyboard();
 
   const safeAreaViewProps = {
     edges: [
@@ -80,12 +77,11 @@ export const ParentView = ({
         {...(shouldDismissKeyboardOnTap
           ? {
               onTouchStart: e => {
-                if (
-                  keyboardHeight &&
-                  e?.target?._internalFiberInstanceHandleDEV?.elementType?.indexOf(
-                    "TextInput"
-                  ) === -1
-                ) {
+                // TextInput.State is the only architecture-agnostic way to
+                // know a tap landed outside the focused input — Fabric event
+                // targets don't carry the Paper fiber internals.
+                const focusedInput = TextInput.State.currentlyFocusedInput();
+                if (focusedInput && e.target !== focusedInput) {
                   Keyboard.dismiss();
                 }
               },
