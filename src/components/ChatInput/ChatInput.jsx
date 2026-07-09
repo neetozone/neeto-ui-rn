@@ -99,6 +99,9 @@ const labels = {
  *            </Container>
  *          }
  *          onChangeText={setValue}
+ *          onArticles={() => {
+ *            alert("On Articles");
+ *          }}
  *          onCannedResponse={() => {
  *            alert("On Canned Response");
  *          }}
