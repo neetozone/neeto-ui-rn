@@ -11,6 +11,7 @@ import {
   Notes,
   Attachment,
   Forward,
+  BookOpen,
   CannedResponses,
   Down,
   SendPlane,
@@ -149,6 +150,8 @@ export const ChatInput = forwardRef(
       onChangeText = () => {},
       onForward,
       onCannedResponse,
+      onArticles,
+      showArticlesFor = [OPTION_TYPES.REPLY, OPTION_TYPES.NOTE],
       toEmails: initialToEmails,
       onReply = () => {},
       onAddNote = () => {},
@@ -417,6 +420,16 @@ export const ChatInput = forwardRef(
                       onPress={onCannedResponse}
                     />
                   )}
+                {onArticles && showArticlesFor.includes(selectedOption) && (
+                  <IconButton
+                    Icon={BookOpen}
+                    opacity={0.5}
+                    iconProps={{
+                      size: moderateScale(30),
+                    }}
+                    onPress={onArticles}
+                  />
+                )}
                 <IconButton
                   {...(isLoading && {
                     iconProps: { color: "grey" },
@@ -520,6 +533,16 @@ ChatInput.propTypes = {
    * Callback to be called on click of canned responses icon.
    */
   onCannedResponse: PropTypes.func,
+  /**
+   * Callback to be called on click of articles icon. Icon is shown only when this is passed.
+   */
+  onArticles: PropTypes.func,
+  /**
+   * Array for options to show the articles icon. Example: ["REPLY","NOTE"]
+   */
+  showArticlesFor: PropTypes.arrayOf(
+    PropTypes.oneOf(Object.values(OPTION_TYPES))
+  ),
   /**
    * Email list separated by comma.
    */
