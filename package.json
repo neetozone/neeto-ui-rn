@@ -36,6 +36,9 @@
       "./node_modules/prettier/bin-prettier.js --write",
       "prettier --write",
       "eslint --fix"
+    ],
+    "./{README.md,docs/**/*.md}": [
+      "prettier --write"
     ]
   },
   "peerDependencies": {

@@ -12,4 +12,10 @@ module.exports = {
   bracketSameLine: false,
   proseWrap: "always",
   endOfLine: "lf",
+  overrides: [
+    {
+      files: "*.md",
+      options: { embeddedLanguageFormatting: "off" },
+    },
+  ],
 };
