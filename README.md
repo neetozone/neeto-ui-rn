@@ -74,8 +74,8 @@ You can use below commands for running storybook in different platforms:
 ## Auto Publish to NPM
 
 neetoUI-RN version gets patched, auto-incremented and auto-published to npm on
-new commit to main branch. You can checkout the `publish` workflow in Github actions
-to get a live update.
+new commit to main branch. You can checkout the `publish` workflow in Github
+actions to get a live update.
 
 ## Building Storybook
 
@@ -96,6 +96,7 @@ create `dist` folder with static files in `docs` folder.
 ## Testing with yalc package manager
 
 To publish locally
+
 ```
 yarn build && rm -rf ~/.yalc/packages && yalc publish --private
 ```
@@ -107,9 +108,11 @@ yarn yalc:publish
 ```
 
 To install local yalc version of library in any app.
+
 ```
-rm -rf .yalc && yalc add @bigbinary/neetoui-rn  && rm -rf node_modules  && yarn 
+rm -rf .yalc && yalc add @bigbinary/neetoui-rn  && rm -rf node_modules  && yarn
 ```
+
 ## Learn more about contributing to this repository
 
 https://github.com/bigbinary/neeto-ui-rn/blob/main/CONTRIBUTING.md
